@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Warna yang Sama — animasi pendek dari Linz, Austria</title>
-<meta name="description" content="Bendera kota Linz merah di atas, putih di bawah. Sama persis dengan bendera Indonesia. Dari fakta itu berdiri sebuah animasi pendek 90 detik untuk HUT RI ke-81.">
+<meta name="description" content="Bendera kota Linz merah di atas, putih di bawah. Sama persis dengan bendera Indonesia. Dari fakta itu berdiri sebuah animasi pendek 93 detik untuk HUT RI ke-81.">
 <meta property="og:title" content="Warna yang Sama">
-<meta property="og:description" content="Bendera kota Linz merah di atas, putih di bawah. Sama persis dengan bendera kita. Animasi pendek dari Linz, Austria.">
+<meta property="og:description" content="Bendera kota Linz merah di atas, putih di bawah. Sama persis dengan bendera Indonesia. Animasi pendek dari Linz, Austria.">
 <meta property="og:image" content="aset/potret/berdua.png">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='16' fill='%23ce1632'/><rect y='16' width='32' height='16' fill='%23fffdf8'/></svg>">
@@ -116,8 +116,8 @@
   <div class="pita"><i></i><i></i></div>
   <h1>Warna yang Sama</h1>
   <p class="kicau">Bendera kota Linz merah di atas, putih di bawah. Sama persis
-  dengan bendera kita. Bukan mirip — sama.</p>
-  <span class="cap">Animasi pendek · 90 detik · HUT RI ke-81</span>
+  dengan bendera Indonesia. Bukan mirip — sama.</p>
+  <span class="cap">Animasi pendek · 93 detik · HUT RI ke-81</span>
 
   <div class="film">
     <video controls playsinline preload="metadata" poster="aset/poster.jpg">
@@ -267,7 +267,7 @@
 
 <section class="bungkus">
   <h2>Naskahnya</h2>
-  <p>Sepuluh adegan, 90 detik. Dialog Knödel hampir seluruhnya bahasa
+  <p>Sepuluh adegan, 93 detik. Dialog Knödel hampir seluruhnya bahasa
   Indonesia; bahasa Jerman disisakan di empat titik saja, dan semuanya
   pendek.</p>
 
@@ -285,7 +285,7 @@
     <div class="adegan">
       <h3>2 · Kamar Ruwet</h3>
       <p>Toples sambal tinggal seperempat. Di dinding, kertas tulisan tangan:
-      Bab 1 ✓, Bab 2 ✓, Bab 3 dengan titik-titik yang ditebalkan sampai
+      Chapter 1 ✓, Chapter 2 ✓, Chapter 3 dengan titik-titik yang ditebalkan sampai
       kertasnya bolong. Laptop menyala semalaman.</p>
       <p>Alarm. Dia hampir tidur lagi. Lalu ingat hari ini hari apa. Duduk,
       selimut masih di bahu, membuka siaran langsung dari Jakarta. Baru
@@ -377,13 +377,16 @@
 
     <div class="adegan">
       <h3>9 · Tepi Donau</h3>
-      <p>Sekelompok mahasiswa Indonesia berdiri rapi di depan satu tiang
-      bendera sederhana. Knödel datang membawa loyang Linzer Torte,
-      meletakkannya di rumput tepat di sebelah sepiring kerupuk dan setoples
-      sambal.</p>
-      <p>Lalu dia mendengar mereka menyanyi — lagu yang sama persis dengan
-      yang dinyanyikan Ruwet pagi tadi di seberang jendelanya. Dia melepas
-      topinya. Tangan kanan ke dada. Dia tidak ikut menyanyi.</p>
+      <p>Bukan barisan upacara. Untaian bendera kertas direntangkan di
+      antara dua tiang bambu, ada balap karung, ada kerupuk menggantung di
+      tali dan anak-anak melompat menggapainya, ada tikar penuh makanan.
+      Knödel datang membawa loyang Linzer Torte, meletakkannya tepat di
+      sebelah sepiring kerupuk dan setoples sambal.</p>
+      <p>Lalu lombanya berhenti. Seorang mahasiswa menarik tali, dan
+      selembar bendera merah putih naik pelan ke puncak bambu sambil semua
+      orang menyanyi — lagu yang sama persis dengan yang dinyanyikan Ruwet
+      pagi tadi di seberang jendelanya. Knödel melepas topinya dan
+      memegangnya. Dia tidak ikut menyanyi.</p>
       <div class="dialog"><b>Knödel</b><span class="jerman">...nicht kaputt.</span></div>
       <p>Sesudah itu yang dia ambil bukan kuenya sendiri, tapi kerupuk. Lalu
       dicocol sambal. Matanya membelalak. Dia tidak berkomentar apa-apa, cuma
@@ -414,8 +417,41 @@
 
 </main>
 
+<section class="bungkus">
+  <h2>Dibuatnya bagaimana</h2>
+  <p>Tidak pakai perangkat lunak animasi, dan tidak ada satu pun gambar yang
+  ditarik pakai pena. Seluruh film ini ditulis sebagai kode Python — kira-kira
+  3.900 baris — dan digambar oleh perender yang dibuat sendiri untuk keperluan
+  ini.</p>
+
+  <div class="bukti">
+    <h3>Cara kerjanya</h3>
+    <p>Tiap adegan adalah satu berkas Python berisi satu fungsi:
+    <code>gambar(kanvas, detik)</code>. Fungsi itu tahu bagaimana rupa
+    dunia pada detik ke berapa pun — di mana kepala Knödel, seberapa jauh
+    trem sudah lewat, sudah setinggi apa benderanya. Perendernya tinggal
+    memanggil fungsi itu 30 kali per detik.</p>
+    <p style="margin:0">Hasilnya 2.790 gambar berukuran 1080×1920, disambung
+    jadi satu berkas video.</p>
+  </div>
+
+  <p>Gambarnya sendiri cuma bidang warna rata dengan garis tepi tebal. Tidak
+  ada gradasi dan tidak ada bayangan halus, karena yang bikin gaya seperti ini
+  terbaca sebagai pilihan — bukan sebagai keterbatasan — adalah ketegasan
+  garis dan kesederhanaan bentuknya. Semua digambar pada kanvas tiga kali
+  lipat lalu dikecilkan, supaya tepinya halus.</p>
+
+  <p>Komiknya bukan gambar baru. Tiap panel adalah satu bingkai film yang
+  dipilih tangan, dipotong ke ukuran potret, lalu diberi balon kata — jadi
+  tokohnya memang persis sama, bukan mirip.</p>
+
+  <p class="catatan">Bahan: Python, Pillow, NumPy, dan ffmpeg. Perender,
+  tokoh, latar, tata gerak, sampai balon komiknya ditulis dari nol untuk film
+  ini.</p>
+</section>
+
 <footer class="bungkus">
-  <p><b>Warna yang Sama</b> — animasi 2D, 90 detik.</p>
+  <p><b>Warna yang Sama</b> — animasi 2D, 93 detik.</p>
   <p>Cerita, gambar, dan animasinya dikerjakan sendiri, termasuk perender
   yang dipakai menggambarnya.</p>
   <p>Linz, Austria · Agustus 2026</p>

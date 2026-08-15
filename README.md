@@ -1,6 +1,6 @@
 # Warna yang Sama
 
-Animasi pendek 90 detik untuk HUT RI ke-81, dibuat di Linz, Austria.
+Animasi pendek 93 detik untuk HUT RI ke-81, dibuat di Linz, Austria.
 
 Bendera kota Linz adalah dua bidang mendatar sama lebar: merah di atas,
 putih di bawah. Versi polosnya, tanpa lambang kota, sama persis dengan
