@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Warna yang Sama — animasi pendek dari Linz, Austria</title>
-<meta name="description" content="Bendera kota Linz merah di atas, putih di bawah. Sama persis dengan bendera Indonesia. Dari fakta itu berdiri sebuah animasi pendek 93 detik untuk HUT RI ke-81.">
+<title>Warna yang Sama, animasi pendek dari Linz, Austria</title>
+<meta name="description" content="Bendera kota Linz merah di atas, putih di bawah. Sama persis dengan bendera Indonesia. Dari fakta itu berdiri dua animasi pendek untuk HUT RI ke-81.">
 <meta property="og:title" content="Warna yang Sama">
 <meta property="og:description" content="Bendera kota Linz merah di atas, putih di bawah. Sama persis dengan bendera Indonesia. Animasi pendek dari Linz, Austria.">
 <meta property="og:image" content="aset/potret/berdua.png">
@@ -48,6 +48,20 @@
   .film{margin:38px auto 0; max-width:420px}
   .film video{width:100%; display:block; border-radius:16px;
               border:3px solid var(--tinta); background:#000}
+  .dua{display:grid; grid-template-columns:1fr 1fr; gap:26px;
+       margin:38px auto 0; max-width:760px; text-align:left}
+  .dua figure{margin:0}
+  .dua video{width:100%; display:block; border-radius:14px;
+             border:3px solid var(--tinta); background:#000}
+  .dua figcaption{font-size:15px; color:var(--redup); margin-top:10px;
+                  line-height:1.5}
+  .dua figcaption b{color:var(--tinta)}
+  .tanda{display:inline-block; font-size:12px; font-weight:700;
+         letter-spacing:.06em; text-transform:uppercase; color:var(--kertas);
+         background:var(--merah); padding:3px 9px; border-radius:999px;
+         margin-bottom:8px}
+  .tanda.abu{background:var(--redup)}
+  @media (max-width:620px){ .dua{grid-template-columns:1fr; gap:34px} }
   .belum{padding:64px 24px; text-align:center; background:var(--kertas);
          border:3px dashed var(--garis); border-radius:16px; color:var(--redup)}
 
@@ -87,9 +101,16 @@
   /* ------------------------------------------------------ komik */
   .komik{display:grid; gap:16px}
   .komik img{width:100%; display:block; border-radius:10px}
-  .gulir{display:flex; gap:14px; overflow-x:auto; padding-bottom:10px;
+  .gulir{display:flex; gap:14px; overflow-x:auto; padding-bottom:12px;
          scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch}
-  .gulir img{flex:0 0 84%; scroll-snap-align:center; border-radius:10px}
+  /* Tinggi panel dikunci ke tinggi layar, bukan ke lebar kolom. Dengan
+     lebar yang mengunci, panel jadi terlalu jangkung di layar pendek dan
+     pembaca tidak pernah melihat gambar beserta balon katanya sekaligus. */
+  .gulir img{flex:0 0 auto; height:min(74vh, 660px); width:auto;
+             scroll-snap-align:center; border-radius:10px;
+             border:2px solid var(--tinta)}
+  .gulir::-webkit-scrollbar{height:8px}
+  .gulir::-webkit-scrollbar-thumb{background:var(--garis); border-radius:4px}
 
   /* ------------------------------------------------------ naskah */
   details{background:var(--kertas); border:2px solid var(--tinta);
@@ -116,18 +137,50 @@
   <div class="pita"><i></i><i></i></div>
   <h1>Warna yang Sama</h1>
   <p class="kicau">Bendera kota Linz merah di atas, putih di bawah. Sama persis
-  dengan bendera Indonesia. Bukan mirip — sama.</p>
-  <span class="cap">Animasi pendek · 93 detik · HUT RI ke-81</span>
+  dengan bendera Indonesia. Bukan mirip, sama.</p>
+  <span class="cap">Dua versi · HUT RI ke-81 · Linz, Austria</span>
 
-  <div class="film">
-    <video controls playsinline preload="metadata" poster="aset/poster.jpg">
-      <source src="aset/warna-yang-sama.mp4" type="video/mp4">
-      Peramban ini belum bisa memutar video.
-    </video>
+  <div class="dua">
+    <figure>
+      <span class="tanda">Versi aksi</span>
+      <video controls playsinline preload="metadata" poster="aset/aksi/poster.jpg">
+        <source src="aset/aksi/warna-yang-sama-aksi.mp4" type="video/mp4">
+        Peramban ini belum bisa memutar video.
+      </video>
+      <figcaption><b>112 detik.</b> Hampir tanpa kata. Komedi fisik, potongan
+      cepat, dan satu adegan di mana keduanya terbawa terbang oleh benderanya
+      sendiri sampai jatuh di alun-alun kota.</figcaption>
+    </figure>
+    <figure>
+      <span class="tanda abu">Versi dialog</span>
+      <video controls playsinline preload="metadata" poster="aset/poster.jpg">
+        <source src="aset/warna-yang-sama.mp4" type="video/mp4">
+        Peramban ini belum bisa memutar video.
+      </video>
+      <figcaption><b>93 detik.</b> Bercerita lewat percakapan di dua jendela
+      yang berseberangan. Salah pahamnya terdengar, bukan terlihat.</figcaption>
+    </figure>
   </div>
 </header>
 
 <main>
+
+<section class="bungkus">
+  <h2>Kenapa ada dua</h2>
+  <p>Ceritanya sama persis. Yang berbeda cara menceritakannya, dan itu
+  ternyata mengubah hampir segalanya.</p>
+  <p>Versi dialog menaruh salah pahamnya di dalam kata-kata. Dua orang bicara
+  dari jendela masing-masing, saling memuji dengan sopan, dan penonton
+  menangkap bahwa keduanya sedang membicarakan negara yang berbeda.</p>
+  <p>Versi aksi membuang hampir seluruh dialognya. Yang tersisa cuma enam kata
+  di enam tempat. Sebagai gantinya: badan yang meregang waktu kaget dan
+  memipih waktu mendarat, kamera yang berpindah puluhan kali, printer yang
+  meletus, dan dua orang yang terbawa angin bersama benderanya melintasi
+  Linz.</p>
+  <p class="catatan">Keduanya dibuat dengan perender yang sama, tokoh yang
+  sama, dan fakta yang sama. Versi aksi datang belakangan, sesudah versi
+  pertama selesai.</p>
+</section>
 
 <section class="bungkus">
   <h2>Kejadiannya begini</h2>
@@ -135,7 +188,7 @@
   putih di kaca jendelanya. Selembar kertas A4, selotip, dari dalam kamar,
   jam lima pagi, supaya bisa ikut upacara Jakarta yang di sini jatuh pukul
   05.00.</p>
-  <p>Tetangga seberang melihatnya. Orang tua itu terharu — dan mengira anak
+  <p>Tetangga seberang melihatnya. Orang tua itu terharu, dan mengira anak
   muda itu sedang membanggakan kota Linz. Sepanjang pagi keduanya saling
   memuji dengan hangat, tentang dua hal yang sama sekali berbeda.</p>
   <p>Keduanya benar. Itu bagian yang paling penting: tidak ada yang salah
@@ -170,8 +223,8 @@
 
   <div class="bukti">
     <h3>Bendera Austria juga merah putih</h3>
-    <p style="margin:0">Merah–putih–merah. Warnanya sama dengan warna kita.
-    Yang berbeda cuma susunannya — dan itu, sebenarnya, seluruh isi film ini
+    <p style="margin:0">Merah-putih-merah. Warnanya sama dengan warna kita.
+    Yang berbeda cuma susunannya, dan itu sebenarnya seluruh isi film ini
     dalam satu kalimat.</p>
   </div>
 
@@ -195,13 +248,13 @@
       master AI, thesis mentok di bab tiga dari lima, dan bertahan di situ
       sudah lama sekali.</p>
       <p class="lafal">Di mulut orang Austria namanya keluar jadi
-      <b>“Rhu Vet”</b> — u-nya panjang, e-nya tegas, dan hasilnya terdengar
+      <b>“Rhu Vet”</b>, u-nya panjang, e-nya tegas, dan hasilnya terdengar
       seperti nama dokter hewan. Dia sudah berhenti mengoreksi sejak semester
       pertama.</p>
       <p>Ada satu hal lagi soal namanya. Ruwet berarti kusut, dan yang mau dia
       bereskan bukan cuma bab tiga. Nanti, kalau semuanya sudah selesai, ada
       kampung kecil di rumah yang keruwetannya menunggu orang yang mau pulang.
-      Sekarang dia belum bisa membereskan keruwetan siapa pun — dia sendiri
+      Sekarang dia belum bisa membereskan keruwetan siapa pun, dia sendiri
       masih ruwet di Linz. Justru itu sebabnya dia harus selesai dulu di sini.</p>
     </div>
   </div>
@@ -237,14 +290,14 @@
   Tidak ada yang menyuruh, tidak ada yang melihat, tidak akan ada yang tahu
   kalau dia memilih tidur lagi. Dia tetap bangun.</p>
 
-  <p><b>Dua, Indonesia tidak ditinggalkan — Indonesia dibawa.</b> Dia tidak
+  <p><b>Dua, Indonesia tidak ditinggalkan, Indonesia dibawa.</b> Dia tidak
   menemukan Indonesia di Austria. Dia membawanya, dalam bentuk bendera
   cetakan yang tintanya habis separuh, toples sambal yang tinggal seperempat,
   dan kebiasaan berdiri tegak waktu lagu tertentu dinyanyikan.</p>
 
   <p><b>Tiga, bangga jadi Indonesia tidak menuntut kita menolak tempat kita
   berdiri.</b> Di akhir film Knödel melepas topinya di depan upacara yang
-  bukan upacaranya. Dia tidak ikut menyanyi — dia tidak hafal, dan itu bukan
+  bukan upacaranya. Dia tidak ikut menyanyi, dia tidak hafal, dan itu bukan
   lagunya. Dia cuma berdiri diam sampai selesai. Menghormati, bukan melebur.</p>
 
   <div class="bukti">
@@ -260,8 +313,13 @@
 
 <section class="bungkus">
   <h2>Komiknya</h2>
-  <p class="catatan">Enam belas panel, diambil dari bingkai filmnya sendiri.
-  Geser ke samping.</p>
+  <p class="catatan">Enam belas panel dari versi aksi, diambil dari bingkai
+  filmnya sendiri. Geser ke samping untuk membaca. Tiap panel dipas ke tinggi
+  layar, jadi gambar dan balon katanya selalu terlihat sekaligus.</p>
+  <p class="catatan">Di filmnya, kalimat penutup muncul sebagai kartu dalam
+  sunyi. Di komik ini kalimat yang sama diucapkan Knödel, karena komik punya
+  ruang yang tidak dimiliki film: pembaca bisa berhenti selama yang dia
+  mau.</p>
   <div class="gulir" id="komik"></div>
 </section>
 
@@ -271,8 +329,140 @@
   Indonesia; bahasa Jerman disisakan di empat titik saja, dan semuanya
   pendek.</p>
 
+  <p class="catatan">Dua naskah, satu untuk tiap versi.</p>
+
   <details>
-    <summary>Buka naskah lengkap</summary>
+    <summary>Buka naskah versi aksi</summary>
+
+    <div class="adegan">
+      <h3>1 · Linz subuh</h3>
+      <p>Satu gerak kamera panjang tanpa potongan: dari kabut di atas Donau,
+      naik ke garis atap, berhenti di satu-satunya jendela yang menyala di
+      seluruh blok. Cahayanya kuning hangat, karena itu layar laptop yang
+      menyala semalaman.</p>
+    </div>
+
+    <div class="adegan">
+      <h3>2 · Ruwet panik</h3>
+      <p>Delapan kejadian dalam sembilan detik. Alarm, kalender 17 Agustus,
+      melompat bangun, tersangkut selimut, jatuh memipih. Printer menolak dua
+      puluh kali. Lalu berhenti, satu detik penuh, wajahnya datar. Printer
+      meletus, lima puluh lembar sekaligus. Satu lembar mendarat di
+      telapaknya.</p>
+    </div>
+
+    <div class="adegan">
+      <h3>3 · Bendera miring, lalu hormat</h3>
+      <p>Ditempel di kaca dari dalam. Miring. Dibetulkan, miring ke arah lain.
+      Dibetulkan lagi, lebih parah.</p>
+      <div class="dialog"><b>Teks</b>Ya sudahlah.</div>
+      <p>Lalu semua alat komedi dimatikan. Tidak ada guncangan kamera, tidak
+      ada potongan. Dia berdiri tegak dan hormat, ditahan tiga detik. Yang
+      terdengar cuma dengung kipas laptop.</p>
+    </div>
+
+    <div class="adegan">
+      <h3>4 · Knödel muncul</h3>
+      <p>Enam potongan dalam delapan detik. Dia melihat sesuatu, kopinya
+      miring.</p>
+      <div class="dialog"><b>Knödel</b><span class="jerman">Grüß Gott!</span></div>
+      <p>Keduanya mengacungkan jempol, tentang dua hal yang sama sekali
+      berbeda.</p>
+    </div>
+
+    <div class="adegan">
+      <h3>5 · Ternyata sama</h3>
+      <p>Bendera besar merosot turun di seberang. Empat kali bolak-balik
+      antara benda dan wajah, makin cepat, lalu berhenti mendadak dan
+      dibekukan satu setengah detik.</p>
+      <div class="dialog"><b>Knödel</b>Linz.</div>
+      <div class="dialog"><b>Ruwet</b>Indonesia.</div>
+    </div>
+
+    <div class="adegan">
+      <h3>6 · Keruwetan A4</h3>
+      <p>Selembar. Tambah satu. Tambah dua. Tambah empat sekaligus. Kertas
+      menutupi seluruh jendela dan kamarnya gelap total. Dari seberang jalan,
+      jempol teracung ke jendela yang sudah tidak bisa dilihat isinya.</p>
+    </div>
+
+    <div class="adegan">
+      <h3>7 · Terbawa terbang</h3>
+      <p>Angin naik. Keduanya menyambar benderanya, dan kainnya terlepas
+      sambil membawa mereka ikut, ke dua arah berlawanan karena apartemen
+      mereka memang berseberangan. Atap kota melaju di bawah dalam tiga lapis
+      kecepatan. Merpati bubar, trem lewat jauh di bawah, kacamata Ruwet lepas
+      dan ditangkapnya sendiri, dan kopi Knödel tetap rata.</p>
+      <p>Tabrakan di Hauptplatz. Kedua bendera melayang turun menimpa mereka,
+      dan tertukar: kain besar mendarat di pangkuan Ruwet, kertas A4 di
+      pangkuan Knödel. Tidak ada yang menoleh.</p>
+      <div class="dialog"><b>Knödel</b><span class="jerman">Kaputt.</span></div>
+      <div class="dialog"><b>Ruwet</b>RUWET.</div>
+    </div>
+
+    <div class="adegan">
+      <h3>8 · Dari tanah, mendongak</h3>
+      <p>Masih terduduk waktu matanya naik ke tiga tiang: Austria, Uni Eropa,
+      dan di tengahnya bendera yang sama persis dengan yang dia tempel pagi
+      tadi. Dia berdiri, merogoh kertas kusut, mengangkatnya sejajar.</p>
+      <div class="dialog"><b>Knödel</b><span class="jerman">Rot-weiß.</span></div>
+      <div class="dialog"><b>Ruwet</b>Merah putih.</div>
+    </div>
+
+    <div class="adegan">
+      <h3>8b · Kota yang menunjukkannya kembali</h3>
+      <p>Tujuh potongan yang makin rapat, tanpa tokoh dan tanpa kata. Tenda
+      toko roti, trem, payung kafe, syal orang, rambu bundar, bendera Austria.
+      Semuanya merah putih, dan semuanya sudah ada di sana sejak dulu.</p>
+    </div>
+
+    <div class="adegan">
+      <h3>9 · Lomba 17-an</h3>
+      <p>Dia berhenti mendadak. Rambutnya berhenti setengah detik kemudian.
+      Bukan barisan upacara: untaian bendera kertas antara dua tiang bambu,
+      balap karung, kerupuk menggantung, tikar penuh makanan.</p>
+    </div>
+
+    <div class="adegan">
+      <h3>10 · Linzer Torte bertemu sambal</h3>
+      <p>Loyang diletakkan tepat di sebelah kerupuk dan sambal. Dia mengambil
+      kerupuk, mencocolnya, memasukkannya ke mulut. Tidak terjadi apa-apa.
+      Lalu matanya membesar, dan cuma matanya.</p>
+      <div class="dialog"><b>Knödel</b><span class="jerman">Gut.</span></div>
+    </div>
+
+    <div class="adegan">
+      <h3>11 · Penutup</h3>
+      <p>Bendera naik di tiang bambu. Knödel melepas topinya dan memegangnya
+      turun di sisi badan. Dia tidak ikut menyanyi, karena dia tidak hafal dan
+      itu bukan lagunya. Dia cuma berdiri diam sampai selesai.</p>
+      <p>Dua wajah, sikap badan yang sama persis. Lalu kamar kosong, layar
+      laptop, 60% jadi 61%.</p>
+      <div class="dialog"><b>Knödel</b><span class="jerman">Kaputt.</span></div>
+      <div class="dialog"><b>Ruwet</b>RUWET.</div>
+      <p>Gambar terakhir mengulang gambar pertama: blok apartemen gelap, satu
+      jendela menyala. Bedanya kameranya mundur bukan mendekat, dan sekarang
+      ada selembar kertas merah putih menempel di kacanya.</p>
+    </div>
+
+    <div class="adegan">
+      <h3>Versi yang diucapkan</h3>
+      <p>Di film, kalimat inti muncul sebagai kartu penutup dalam sunyi. Versi
+      yang diucapkan tetap ada, dan tempatnya di komik dan di naskah:</p>
+      <div class="dialog"><b>Knödel</b><span class="jerman">Ost und West,
+      daheim das Best.</span> <span class="catatan">(peribahasa tua: timur,
+      barat, paling enak tetap rumah)</span></div>
+      <div class="dialog"><b>Knödel</b>Yang sama bukan warnanya, Rhu Vet.</div>
+      <div class="dialog"><b>Knödel</b>Yang sama itu rasa bangganya. Pada
+      tempat yang kita sebut rumah.</div>
+      <div class="dialog"><b>Ruwet</b>Nanti saya pulang, Pak. Kalau semua ini
+      sudah selesai.</div>
+      <div class="dialog"><b>Knödel</b>Selesaikan.</div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Buka naskah versi dialog</summary>
 
     <div class="adegan">
       <h3>1 · Linz, subuh</h3>
@@ -289,7 +479,7 @@
       kertasnya bolong. Laptop menyala semalaman.</p>
       <p>Alarm. Dia hampir tidur lagi. Lalu ingat hari ini hari apa. Duduk,
       selimut masih di bahu, membuka siaran langsung dari Jakarta. Baru
-      kemudian dia ingat benderanya — menarik selembar kertas dari printer di
+      kemudian dia ingat benderanya, menarik selembar kertas dari printer di
       lantai, menempelkannya di kaca dari dalam. Miring. Diluruskan. Masih
       miring. Dibiarkan.</p>
       <div class="dialog"><b>Ruwet</b>Siap... grak.</div>
@@ -323,7 +513,7 @@
       <h3>5 · Saling memuji</h3>
       <p>Tinta printernya habis di tengah cetakan. Knödel membalas dengan
       bendera Linz yang lebih besar lagi. Ruwet menyambung dua belas lembar A4
-      dengan selotip sampai menutupi seluruh jendelanya dari dalam — kamarnya
+      dengan selotip sampai menutupi seluruh jendelanya dari dalam, kamarnya
       gelap total. Dari seberang, Knödel mengacungkan jempol ke jendela yang
       sudah gelap gulita itu.</p>
       <p>Lalu keduanya meletakkan tangan di dada dan menyanyi. Dua lagu yang
@@ -339,8 +529,8 @@
       <p>Kedua bendera lepas, beterbangan, lalu berpilin jadi satu gulungan di
       kabel trem. Di atas sana tidak ada lagi cara membedakan milik siapa.</p>
       <div class="dialog"><b>Knödel</b><span class="jerman">Kaputt.</span>
-      <span class="catatan">— subtitle: Sudah saya duga sejak awal bahwa hal
-      semacam ini, cepat atau lambat, memang akan terjadi di gedung ini.</span></div>
+      <span class="catatan">(subtitle: Sudah saya duga sejak awal bahwa hal
+      semacam ini, cepat atau lambat, memang akan terjadi di gedung ini.)</span></div>
       <p>Sehelai kain kecil mendarat di rambut Ruwet dan tidak mau lepas.
       Keduanya saling menunjuk ke atas, serempak. Diam dua detik. Lalu
       tertawa.</p>
@@ -384,7 +574,7 @@
       sebelah sepiring kerupuk dan setoples sambal.</p>
       <p>Lalu lombanya berhenti. Seorang mahasiswa menarik tali, dan
       selembar bendera merah putih naik pelan ke puncak bambu sambil semua
-      orang menyanyi — lagu yang sama persis dengan yang dinyanyikan Ruwet
+      orang menyanyi, lagu yang sama persis dengan yang dinyanyikan Ruwet
       pagi tadi di seberang jendelanya. Knödel melepas topinya dan
       memegangnya. Dia tidak ikut menyanyi.</p>
       <div class="dialog"><b>Knödel</b><span class="jerman">...nicht kaputt.</span></div>
@@ -396,8 +586,8 @@
     <div class="adegan">
       <h3>10 · Penutup</h3>
       <div class="dialog"><b>Knödel</b><span class="jerman">Ost und West,
-      daheim das Best.</span> <span class="catatan">— peribahasa tua: timur,
-      barat, paling enak tetap rumah.</span></div>
+      daheim das Best.</span> <span class="catatan">(peribahasa tua: timur,
+      barat, paling enak tetap rumah.)</span></div>
       <div class="dialog"><b>Knödel</b>Yang sama bukan warnanya, Rhu Vet.</div>
       <div class="dialog"><b>Knödel</b>Yang sama itu rasa bangganya. Pada
       tempat yang kita sebut rumah.</div>
@@ -420,29 +610,29 @@
 <section class="bungkus">
   <h2>Dibuatnya bagaimana</h2>
   <p>Tidak pakai perangkat lunak animasi, dan tidak ada satu pun gambar yang
-  ditarik pakai pena. Seluruh film ini ditulis sebagai kode Python — kira-kira
-  3.900 baris — dan digambar oleh perender yang dibuat sendiri untuk keperluan
+  ditarik pakai pena. Seluruh film ini ditulis sebagai kode Python, kira-kira
+  3.900 baris, dan digambar oleh perender yang dibuat sendiri untuk keperluan
   ini.</p>
 
   <div class="bukti">
     <h3>Cara kerjanya</h3>
     <p>Tiap adegan adalah satu berkas Python berisi satu fungsi:
     <code>gambar(kanvas, detik)</code>. Fungsi itu tahu bagaimana rupa
-    dunia pada detik ke berapa pun — di mana kepala Knödel, seberapa jauh
-    trem sudah lewat, sudah setinggi apa benderanya. Perendernya tinggal
+    dunia pada detik ke berapa pun (di mana kepala Knödel, seberapa jauh
+    trem sudah lewat, sudah setinggi apa benderanya). Perendernya tinggal
     memanggil fungsi itu 30 kali per detik.</p>
-    <p style="margin:0">Hasilnya 2.790 gambar berukuran 1080×1920, disambung
-    jadi satu berkas video.</p>
+    <p style="margin:0">Hasilnya ribuan gambar berukuran 1080×1920, disambung jadi
+    berkas video. Versi aksi sendiri 3.360 bingkai.</p>
   </div>
 
   <p>Gambarnya sendiri cuma bidang warna rata dengan garis tepi tebal. Tidak
   ada gradasi dan tidak ada bayangan halus, karena yang bikin gaya seperti ini
-  terbaca sebagai pilihan — bukan sebagai keterbatasan — adalah ketegasan
+  terbaca sebagai pilihan (bukan sebagai keterbatasan) adalah ketegasan
   garis dan kesederhanaan bentuknya. Semua digambar pada kanvas tiga kali
   lipat lalu dikecilkan, supaya tepinya halus.</p>
 
   <p>Komiknya bukan gambar baru. Tiap panel adalah satu bingkai film yang
-  dipilih tangan, dipotong ke ukuran potret, lalu diberi balon kata — jadi
+  dipilih tangan, dipotong ke ukuran potret, lalu diberi balon kata, jadi
   tokohnya memang persis sama, bukan mirip.</p>
 
   <p class="catatan">Bahan: Python, Pillow, NumPy, dan ffmpeg. Perender,
@@ -451,7 +641,7 @@
 </section>
 
 <footer class="bungkus">
-  <p><b>Warna yang Sama</b> — animasi 2D, 93 detik.</p>
+  <p><b>Warna yang Sama</b>, animasi 2D, 93 detik.</p>
   <p>Cerita, gambar, dan animasinya dikerjakan sendiri, termasuk perender
   yang dipakai menggambarnya.</p>
   <p>Linz, Austria · Agustus 2026</p>
@@ -465,7 +655,7 @@
   for (let i = 1; i <= JUMLAH_PANEL; i++) {
     const n = String(i).padStart(2, '0');
     const im = document.createElement('img');
-    im.src = `aset/komik/p${n}.png`;
+    im.src = `aset/aksi/komik/p${n}.png`;
     im.alt = `Panel komik ${i}`;
     im.loading = 'lazy';
     wadah.appendChild(im);
