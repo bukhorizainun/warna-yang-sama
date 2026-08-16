@@ -93,6 +93,17 @@
   .tokoh p:last-child{margin-bottom:0}
   .lafal{font-size:16px; background:#efe7d6; border-left:4px solid var(--merah);
          padding:10px 14px; border-radius:0 8px 8px 0}
+  .daftar{margin:0 0 12px; padding-left:0; list-style:none}
+  .daftar li{position:relative; padding-left:22px; margin-bottom:7px;
+             font-size:17px}
+  .daftar li::before{content:""; position:absolute; left:0; top:.62em;
+                     width:9px; height:9px; background:var(--merah);
+                     border-radius:2px}
+  .tutup{margin-top:30px; padding:26px 24px; background:var(--tinta);
+         color:var(--kertas); border-radius:14px; text-align:center}
+  .tutup p{margin:0 0 12px; font-size:19px; line-height:1.6}
+  .tutup p:last-child{margin:0}
+  .tutup b{color:#f6b8c2}
   @media (max-width:560px){
     .tokoh{flex-direction:column; align-items:center; text-align:center}
     .lafal{text-align:left}
@@ -162,8 +173,9 @@
   saling memuji dengan hangat, tentang dua hal yang sama sekali berbeda.</p>
   <p>Keduanya benar. Itu bagian yang paling penting: tidak ada yang salah
   lihat, dan tidak ada yang perlu diluruskan.</p>
-  <p>Lalu angin datang, keduanya terbawa terbang bersama benderanya melewati
-  atap kota, dan mendarat di Hauptplatz dengan bendera yang tertukar. Di atas
+  <p>Lalu angin datang. Kn&ouml;del terbawa kainnya, Ruwet terbawa selembar
+  kertas printernya, dan keduanya melayang melewati atap kota sampai mendarat
+  di Hauptplatz dengan bendera yang tertukar. Di atas
   kepala mereka, di depan Altes Rathaus, bendera yang sama itu sedang berkibar
   resmi setinggi gedung.</p>
 </section>
@@ -221,19 +233,41 @@
     <img src="aset/potret/ruwet.png" alt="Ruwet">
     <div>
       <h3>Ruwet</h3>
-      <p>Kepanjangannya Raden Untung Wibisono Eka Trisno. Dipanggil Ruwet
-      karena memang itu singkatannya, dan memang itu keadaannya. Mahasiswa
-      master AI, thesis mentok di bab tiga dari lima, dan bertahan di situ
-      sudah lama sekali.</p>
+      <p>Kepanjangannya Raden Untung Wibisono Eka Trisno. Orang tuanya memilih
+      nama sepanjang itu supaya anaknya besar jadi orang yang lurus dan
+      tertata. Singkatannya keluar jadi Ruwet, dan sejak hari itu takdirnya
+      sudah diumumkan lebih dulu daripada orangnya sendiri.</p>
+
+      <p>Ruwet berarti kusut. Hampir semua yang menempel padanya memang
+      begitu:</p>
+
+      <ul class="daftar">
+        <li>Rambutnya ruwet, dan belum ada sisir yang berhasil membujuknya.</li>
+        <li>Kabel di mejanya ruwet, sampai dia sendiri lupa mana yang mengisi
+        apa.</li>
+        <li>Jadwalnya ruwet, karena kuliahnya di sini dan rapat organisasinya
+        di sana, beda lima jam.</li>
+        <li>Tesisnya paling ruwet: bab tiga dari lima, dan sudah bertahan di
+        situ lebih lama daripada yang berani dia hitung.</li>
+        <li>Bahasa Jermannya ruwet, sampai kasir supermarket lebih sering
+        menjawabnya dalam bahasa Inggris.</li>
+        <li>Perasaannya waktu ibunya menelepon dan bertanya kapan pulang juga
+        ruwet. Yang satu itu tidak pernah dia ceritakan ke siapa-siapa.</li>
+      </ul>
+
+      <p>Yang tidak pernah ruwet cuma satu. Tiap 17 Agustus dia bangun sebelum
+      subuh, tanpa ada yang menyuruh, dan tidak sekali pun kesiangan.</p>
+
       <p class="lafal">Di mulut orang Austria namanya keluar jadi
-      <b>“Rhu Vet”</b>, u-nya panjang, e-nya tegas, dan hasilnya terdengar
-      seperti nama dokter hewan. Dia sudah berhenti mengoreksi sejak semester
-      pertama.</p>
-      <p>Ada satu hal lagi soal namanya. Ruwet berarti kusut, dan yang mau dia
-      bereskan bukan cuma bab tiga. Nanti, kalau semuanya sudah selesai, ada
-      kampung kecil di rumah yang keruwetannya menunggu orang yang mau pulang.
-      Sekarang dia belum bisa membereskan keruwetan siapa pun, dia sendiri
-      masih ruwet di Linz. Justru itu sebabnya dia harus selesai dulu di sini.</p>
+      <b>“Rhu Vet”</b>, u-nya panjang, e-nya tegas, dan hasilnya
+      terdengar seperti nama dokter hewan. Dia sudah berhenti mengoreksi sejak
+      semester pertama.</p>
+
+      <p>Ada satu hal lagi soal namanya. Nanti, kalau semuanya sudah selesai,
+      ada kampung kecil di rumah yang keruwetannya sedang menunggu orang yang
+      mau pulang. Sekarang dia belum bisa membereskan keruwetan siapa pun,
+      dia sendiri masih ruwet di Linz. Justru itu sebabnya dia harus selesai
+      dulu di sini.</p>
     </div>
   </div>
 
@@ -241,19 +275,31 @@
     <img src="aset/potret/knodel.png" alt="Herr Knödel">
     <div>
       <h3>Herr Knödel</h3>
-      <p>Tetangga seberang. Pensiunan, asli Linz, badan sebesar tong, kepala
-      kecil, kumis melintang, dan topi Tyrolean yang jelas kekecilan. Kalau
-      ada yang tidak beres dia bilang <span class="jerman">“Kaputt.”</span>
-      Datar, tanpa emosi.</p>
-      <p class="lafal">Namanya juga makanan: <b>Knödel</b> itu bola tepung
-      rebus, sepupu jauh pangsit. Di Austria itu nama keluarga biasa saja dan
-      tidak ada yang menoleh. Ruwet menoleh.</p>
+      <p>Tetangga seberang. Pensiunan, asli Linz, belum pernah tinggal lebih
+      dari empat puluh kilometer dari tempat dia lahir, dan menganggap itu
+      pencapaian.</p>
+
+      <p>Badan sebesar tong, kepala kecil, kumis melintang, dan topi Tyrolean
+      yang jelas kekecilan tapi tidak pernah diganti. Cangkir kopinya tidak
+      pernah lepas dari tangan, termasuk waktu dia melayang melintasi kota,
+      dan tidak tumpah setetes pun.</p>
+
+      <p>Kalau ada yang tidak beres dia bilang
+      <span class="jerman">“Kaputt.”</span> Datar, tanpa emosi,
+      dan berlaku sama untuk printer yang macet maupun untuk dirinya sendiri
+      yang baru mendarat di batu alun-alun.</p>
+
+      <p class="lafal">Namanya juga makanan. <b>Knödel</b> itu bola
+      tepung rebus, sepupu jauh pangsit. Di Austria itu nama keluarga biasa
+      saja dan tidak ada yang menoleh. Ruwet menoleh.</p>
+
       <p>Jadi keduanya sama-sama punya nama yang terdengar aneh di telinga
-      lawan bicaranya, dan tidak satu pun dari mereka salah dengar. Itu
-      seluruh film ini dalam satu lelucon kecil.</p>
+      lawan bicaranya, dan tidak satu pun dari mereka salah dengar. Seluruh
+      film ini muat di dalam lelucon kecil itu.</p>
+
       <p>Dia bukan bahan tertawaan. Dia orang yang bangga pada kotanya, dan
-      kebanggaan itulah yang bikin salah paham ini berjalan mulus sampai
-      akhir.</p>
+      kebanggaan itu yang bikin salah paham ini berjalan mulus dari pagi
+      sampai sore tanpa sekali pun perlu diluruskan.</p>
     </div>
   </div>
 </section>
@@ -261,31 +307,57 @@
 <section class="bungkus">
   <h2>Yang sebenarnya diceritakan</h2>
   <p>Kesamaan bendera itu cuma pintu masuk. Yang mau dibilang film ini ada
-  tiga, dan ketiganya sengaja tidak pernah diucapkan sebagai kesimpulan.</p>
+  empat, dan tidak satu pun pernah diucapkan sebagai kesimpulan.</p>
 
-  <p><b>Satu, nasionalisme itu pilihan pribadi.</b> Gambar terpenting di
-  seluruh film adalah Ruwet hormat sendirian jam lima pagi di kamar sewaan.
-  Tidak ada yang menyuruh, tidak ada yang melihat, tidak akan ada yang tahu
-  kalau dia memilih tidur lagi. Dia tetap bangun.</p>
+  <h3>Satu, nasionalisme itu urusan yang sepi</h3>
+  <p>Gambar terpenting di seluruh film bukan bendera raksasa di alun-alun.
+  Gambar terpenting adalah seorang anak muda memberi hormat sendirian jam lima
+  pagi, kepada selembar kertas printer, di kamar sewaan yang temboknya bukan
+  miliknya. Tidak ada yang menyuruh. Tidak ada yang melihat. Tidak akan ada
+  yang tahu kalau pagi itu dia memilih tidur lagi.</p>
+  <p>Dia tetap bangun. Di situ letaknya.</p>
 
-  <p><b>Dua, Indonesia tidak ditinggalkan, Indonesia dibawa.</b> Dia tidak
-  menemukan Indonesia di Austria. Dia membawanya, dalam bentuk bendera
-  cetakan yang tintanya habis separuh, toples sambal yang tinggal seperempat,
-  dan kebiasaan berdiri tegak waktu lagu tertentu dinyanyikan.</p>
+  <h3>Dua, Indonesia tidak ditinggalkan, Indonesia dibawa</h3>
+  <p>Dia tidak menemukan Indonesia di Austria. Dia yang membawanya ke sana,
+  dalam bentuk yang kecil-kecil dan tidak satu pun megah: bendera cetakan yang
+  tintanya habis separuh, toples sambal yang tinggal seperempat dan tidak
+  berani dihabiskan, dan kebiasaan berdiri tegak tiap kali lagu tertentu
+  terdengar, walaupun yang menyanyikannya cuma pengeras suara laptop.</p>
 
-  <p><b>Tiga, bangga jadi Indonesia tidak menuntut kita menolak tempat kita
-  berdiri.</b> Di akhir film Knödel melepas topinya di depan upacara yang
-  bukan upacaranya. Dia tidak ikut menyanyi, dia tidak hafal, dan itu bukan
-  lagunya. Dia cuma berdiri diam sampai selesai. Menghormati, bukan melebur.</p>
+  <h3>Tiga, yang ruwet bukan berarti berhenti</h3>
+  <p>Namanya Ruwet dan memang itu keadaannya. Bab tiga dari lima. Beasiswa
+  yang harus dilaporkan. Bahasa yang belum juga masuk. Musim dingin yang
+  gelapnya datang jam empat sore. Tapi pagi 17 Agustus dia bangun lebih dulu
+  daripada seluruh blok apartemen, dan mengerjakan satu-satunya hal yang tidak
+  tercantum di daftar tugas siapa pun.</p>
+  <p>Merantau memang begitu. Jarang ada yang selesai tepat waktu, dan tidak
+  ada satu pun yang boleh ditinggalkan setengah jalan.</p>
+
+  <h3>Empat, bangga jadi Indonesia tidak menuntut kita menolak tempat kita
+  berdiri</h3>
+  <p>Di akhir film Knödel melepas topinya di depan upacara yang bukan
+  upacaranya. Dia tidak ikut menyanyi, dia tidak hafal, dan itu bukan lagunya.
+  Dia cuma berdiri diam sampai selesai.</p>
+  <p>Menghormati, bukan melebur. Dua hal yang sering dikira sama, padahal
+  jaraknya jauh sekali.</p>
 
   <div class="bukti">
     <h3>Judulnya punya dua arti</h3>
     <p>Yang pertama harfiah: benderanya memang sama-sama merah putih.</p>
-    <p style="margin:0">Yang kedua baru terbuka di akhir, waktu Knödel bicara
-    pelan sambil memandang tiang bendera: <b>yang sama bukan warnanya, yang
-    sama itu rasa bangganya pada tempat yang kita sebut rumah.</b> Kebanggaan
-    Knödel pada Linz dan kebanggaan Ruwet pada Indonesia itu barang yang sama
-    persis, cuma tertuju ke arah yang berbeda.</p>
+    <p style="margin:0">Yang kedua baru terbuka di akhir, waktu Knödel
+    bicara pelan sambil memandang tiang bendera: <b>yang sama bukan warnanya,
+    yang sama rasa bangganya pada tempat yang kita sebut rumah.</b> Kebanggaan
+    Knödel pada Linz dan kebanggaan Ruwet pada Indonesia itu barang yang
+    sama persis, cuma menghadap arah yang berbeda.</p>
+  </div>
+
+  <div class="tutup">
+    <p>Ada yang merayakan tujuh belas Agustus di lapangan, dengan pengeras
+    suara dan seragam yang disetrika semalam sebelumnya.</p>
+    <p>Ada yang merayakannya di kamar sewaan berukuran dua belas meter
+    persegi, dengan selembar kertas printer yang tintanya habis separuh, jam
+    lima pagi, sebelum berangkat ke kampus.</p>
+    <p><b>Yang sama bukan caranya. Yang sama rasa bangganya.</b></p>
   </div>
 </section>
 
@@ -340,11 +412,12 @@
       <h3>7 &middot; Angin</h3>
       <p>Angin datang dari arah Donau. Kertas-kertas di kaca Ruwet lepas
       sekaligus, bendera Kn&ouml;del terlepas dari kaitnya, dan keduanya
-      berpegang terlalu erat pada kainnya masing-masing.</p>
+      berpegang terlalu erat pada benderanya masing-masing: Kn&ouml;del pada
+      kain, Ruwet pada selembar kertas printer.</p>
       <p>Mereka terangkat.</p>
       <p>Dua orang terbang di atas Linz sambil memegangi bendera yang membawa
-      mereka: melewati atap, melewati menara gereja, melewati trem yang
-      berjalan jauh di bawah. Ruwet berteriak. Kn&ouml;del, entah bagaimana,
+      mereka &mdash; satu kain lebar, satu lembar A4 &mdash; melewati atap,
+      melewati menara gereja, melewati trem yang berjalan jauh di bawah. Ruwet berteriak. Kn&ouml;del, entah bagaimana,
       masih memegang cangkirnya dan kopinya tidak tumpah setetes pun.</p>
       <p>Mereka mendarat di Hauptplatz. Tidak dengan cara yang
       direncanakan.</p>
